@@ -21,7 +21,10 @@ namespace LemonadeStandv2
                 ice.ice = ice.ice - recipe.iceRecipe;
                 bank.money = bank.money + player.lemonadePrice;
                 bank.totalSales = bank.totalSales + player.lemonadePrice;
-            }else
+                Console.WriteLine("Customer {0} bought a cup", day.customerCount);
+
+            }
+            else
             {
                 if(lemon.lemon - recipe.lemonRecipe > 0 && sugar.sugar - recipe.sugarRecipe > 0 && cups.cups - 12 > 0)
                 {

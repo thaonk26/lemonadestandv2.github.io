@@ -28,11 +28,11 @@ namespace LemonadeStandv2
         
         public Game()
         {
-            Console.WriteLine("What would you liked to be called?");
-            player1 = new Player(Console.ReadLine());
         }
         public void RunGame(Game game)
         {
+            Console.WriteLine("What would you liked to be called?");
+            player1 = new Player(Console.ReadLine());
             Console.WriteLine("How many days would you like to play Lemonadestand for? (Minimum 7 days)");
             int.TryParse(Console.ReadLine(), out day.setDay);
             for (int i = 0; i < day.setDay; i++)
@@ -43,7 +43,7 @@ namespace LemonadeStandv2
                 tomorrowsWeather.SetTemperature();
                 customer.SpawnCustomer(game);
                 weather.GetCurrentWeather();
-                player1.PrepLemonade(bank, weather, tomorrowsWeather, inventory, day, lemon, sugar, ice, cups);
+                player1.PrepLemonade(bank, weather, tomorrowsWeather, inventory, day, lemon, sugar, ice, cups, player1);
                 player1.SetRecipe(recipe);
                 day.RunDay(pitcher, recipe, ice, lemon, sugar, cups, bank, player1, customer, day, inventory, weather, game);
                 Console.ReadLine();

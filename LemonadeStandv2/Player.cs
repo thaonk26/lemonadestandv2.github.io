@@ -16,15 +16,15 @@ namespace LemonadeStandv2
             this.name = Name;
 
         }
-        public void PrepLemonade(Bank bank, Weather currentWeather, Weather tomorrowsWeather, Inventory inventory, Day day, Lemon lemon, Sugar sugar, Ice ice, Cups cups)
+        public void PrepLemonade(Bank bank, Weather currentWeather, Weather tomorrowsWeather, Inventory inventory, Day day, Lemon lemon, Sugar sugar, Ice ice, Cups cups, Player player)
         {
             Store store = new Store();
-            store.BuyLemons(bank, currentWeather, tomorrowsWeather, inventory, day, lemon, sugar, ice, cups);
-            store.BuyCups(bank, currentWeather, tomorrowsWeather, inventory, day, cups, lemon, ice, sugar);
-            store.BuyIce(bank, currentWeather, tomorrowsWeather, inventory, day, ice, lemon, sugar, cups);
-            store.BuySugar(bank, currentWeather, tomorrowsWeather, inventory, day, sugar, lemon,ice, cups);
+            store.BuyLemons(bank, currentWeather, tomorrowsWeather, inventory, day, lemon, sugar, ice, cups, player);
+            store.BuyCups(bank, currentWeather, tomorrowsWeather, inventory, day, cups, lemon, ice, sugar, player);
+            store.BuyIce(bank, currentWeather, tomorrowsWeather, inventory, day, ice, lemon, sugar, cups, player);
+            store.BuySugar(bank, currentWeather, tomorrowsWeather, inventory, day, sugar, lemon,ice, cups, player);
             Console.Clear();
-            inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day);
+            inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day, player);
             currentWeather.ChangeWeather();
             bank.totalMoneySpent = bank.totalMoneySpent + (store.storeLemons * store.pricePerLemon) + (store.storeSugar * store.pricePerSugar) + (store.storeIce * store.pricePerIce) + (store.storeCups * store.pricePerCup);
             Console.WriteLine("At what would you like to sell your Lemonade at?");

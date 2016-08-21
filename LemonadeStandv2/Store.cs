@@ -21,14 +21,14 @@ namespace LemonadeStandv2
         {
 
         }
-        public int BuyLemons(Bank bank, Weather currentWeather, Weather tomorrowsWeather, Inventory inventory, Day day, Lemon lemon, Sugar sugar, Ice ice, Cups cups)
+        public int BuyLemons(Bank bank, Weather currentWeather, Weather tomorrowsWeather, Inventory inventory, Day day, Lemon lemon, Sugar sugar, Ice ice, Cups cups, Player player)
         {
             bool buyingLemons = true;
             int amountOfLemons;
             while (buyingLemons)
             {
                 Console.Clear();
-                inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day);
+                inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day, player);
                 Console.WriteLine();
                 Console.WriteLine("Would you like to buy 10($1), 20($2) or 40($4) Lemons? Enter to move on.");
                 int.TryParse(Console.ReadLine(), out amountOfLemons);
@@ -80,14 +80,14 @@ namespace LemonadeStandv2
             }
             return storeLemons;
         }
-        public int BuyCups(Bank bank, Weather currentWeather, Weather tomorrowsWeather, Inventory inventory, Day day, Cups cups, Lemon lemon, Ice ice, Sugar sugar)
+        public int BuyCups(Bank bank, Weather currentWeather, Weather tomorrowsWeather, Inventory inventory, Day day, Cups cups, Lemon lemon, Ice ice, Sugar sugar, Player player)
         {
             bool buyingCups = true;
             int amountOfCups;
             while (buyingCups)
             {
                 Console.Clear();
-                inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day);
+                inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day, player);
                 Console.WriteLine();
                 Console.WriteLine("Would you like to buy 20($0.75), 40($1.50) or 100($3.75) Cups? Enter to move on");
                 int.TryParse(Console.ReadLine(), out amountOfCups);
@@ -139,14 +139,14 @@ namespace LemonadeStandv2
             }
             return storeCups;
         }
-        public int BuyIce(Bank bank, Weather currentWeather, Weather tomorrowsWeather, Inventory inventory, Day day, Ice ice, Lemon lemon, Sugar sugar, Cups cups)
+        public int BuyIce(Bank bank, Weather currentWeather, Weather tomorrowsWeather, Inventory inventory, Day day, Ice ice, Lemon lemon, Sugar sugar, Cups cups, Player player)
         {
             bool buyingIce = true;
             int amountOfIce;
             while (buyingIce)
             {
                 Console.Clear();
-                inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day);
+                inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day, player);
                 Console.WriteLine();
                 Console.WriteLine("Would you like to buy 100($0.80), 200($1.60) or 500($4) Ice? Enter to move on.");
                 int.TryParse(Console.ReadLine(), out amountOfIce);
@@ -199,14 +199,14 @@ namespace LemonadeStandv2
             }
             return storeIce;
         }
-        public int BuySugar(Bank bank, Weather currentWeather, Weather tomorrowsWeather, Inventory inventory, Day day, Sugar sugar, Lemon lemon, Ice ice, Cups cups)
+        public int BuySugar(Bank bank, Weather currentWeather, Weather tomorrowsWeather, Inventory inventory, Day day, Sugar sugar, Lemon lemon, Ice ice, Cups cups, Player player)
         {
             bool buyingSugar = true;
             int amountOfSugar;
             while (buyingSugar)
             {
                 Console.Clear();
-                inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day);
+                inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day, player);
                 Console.WriteLine();
                 Console.WriteLine("Would you like to buy 10($1), 20($2) or 40($4) Sugar? Enter to move on.");
                 int.TryParse(Console.ReadLine(), out amountOfSugar);

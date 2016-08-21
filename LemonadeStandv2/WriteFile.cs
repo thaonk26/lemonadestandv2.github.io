@@ -12,6 +12,7 @@ namespace LemonadeStandv2
         public WriteFile(List<string> SavedInventory)
         {
             TextWriter saveGame = new StreamWriter(".\\GameSave.txt");
+            saveGame.WriteLine(SavedInventory);
             saveGame.Close();
             Environment.Exit(0);
         }
