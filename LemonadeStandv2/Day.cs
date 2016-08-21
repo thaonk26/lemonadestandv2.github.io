@@ -17,6 +17,7 @@ namespace LemonadeStandv2
         }
         public void RunDay(Pitcher pitcher, Recipe recipe, Ice ice, Lemon lemon, Sugar sugar, Cups cups, Bank bank, Player player1, Customer customer, Day day, Inventory inventory, Weather weather, Game game)
         {
+            customerBuy = true;
             while (customerBuy)
             {
                 for (int i = 0; i < game.customerGenerate.Count; i++)

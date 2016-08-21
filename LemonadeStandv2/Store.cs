@@ -89,7 +89,7 @@ namespace LemonadeStandv2
                 Console.Clear();
                 inventory.printDisplay(bank, currentWeather, tomorrowsWeather, lemon, sugar, ice, cups, day);
                 Console.WriteLine();
-                Console.WriteLine("Would you like to buy 20($0.75), 40($1.50) or 100($3.75) Cups? Enter to move on.");
+                Console.WriteLine("Would you like to buy 20($0.75), 40($1.50) or 100($3.75) Cups? Enter to move on");
                 int.TryParse(Console.ReadLine(), out amountOfCups);
                 switch (amountOfCups)
                 {

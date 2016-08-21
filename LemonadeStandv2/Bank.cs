@@ -19,6 +19,7 @@ namespace LemonadeStandv2
         public void TotalSalesResults(Inventory inventory, Player player1, Day day, Ice ice, Lemon lemon, Sugar sugar, Cups cups, Store store)
         {
             Console.Clear();
+            Console.WriteLine("*************************************************************");
             Console.WriteLine("Congrats {0}!!! You finished your {1} Days of Lemonade Stand!", player1.name, day.setDay);
             Console.WriteLine("Your total sales for {1} Days are ${0}", totalSales, day.setDay);
             Console.WriteLine("Your total money spent during the {0} Days are ${1}", day.setDay, totalMoneySpent);
@@ -33,6 +34,7 @@ namespace LemonadeStandv2
             {
                 Console.WriteLine("You didn't make a profit and lost ${0:00.00}", profits);
             }
+            Console.WriteLine("**************************************************************");
             Console.ReadLine();
         }
     }

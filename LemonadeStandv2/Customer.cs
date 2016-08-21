@@ -16,6 +16,7 @@ namespace LemonadeStandv2
         }
         public int SpawnCustomer(Game game)
         {
+            game.customerGenerate.Clear();
             Random randomCustomer = new Random();
             int numberOfCustomer = randomCustomer.Next(50, 105);
             for (int i = 0; i < numberOfCustomer; i++)

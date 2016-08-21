@@ -24,6 +24,7 @@ namespace LemonadeStandv2
         Inventory inventory = new Inventory();
         Store store = new Store();
         public List<int> customerGenerate = new List<int>();
+       
         
         public Game()
         {
@@ -47,7 +48,6 @@ namespace LemonadeStandv2
                 day.RunDay(pitcher, recipe, ice, lemon, sugar, cups, bank, player1, customer, day, inventory, weather, game);
                 Console.ReadLine();
                 weather = tomorrowsWeather;
-                
             }
             bank.TotalSalesResults(inventory, player1, day, ice, lemon, sugar, cups, store);
         }
