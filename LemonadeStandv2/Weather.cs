@@ -9,50 +9,55 @@ namespace LemonadeStandv2
 {
     class Weather
     {
-        Random randomWeather = new Random();
+        public string getWeather;
         public string currentWeather;
+        public int getTemperature;
         public int currentTemperature;
         public string tomorrowsWeather;
         public int tomorrowsTemperature;
         public Weather()
         {
-            currentWeather = SetWeather();
-            currentTemperature = SetTemperature();
+            getWeather = SetWeather();
+            currentWeather = getWeather;
+            getTemperature = SetTemperature();
+            currentTemperature = getTemperature;
             Thread.Sleep(500);
             tomorrowsWeather = SetWeather();
             tomorrowsTemperature = SetTemperature();
         }
         public string SetWeather()
         {
+            Random randomWeather = new Random();
             int weather = randomWeather.Next(1, 4);
             switch (weather)
             {
                 case 1:
-                    currentWeather = "Sunny";
+                    getWeather = "Sunny";
                     break;
                 case 2:
-                    currentWeather = "Rainy";
+                    getWeather = "Rainy";
                     break;
                 default:
-                    currentWeather = "Cloudy";
+                    getWeather = "Cloudy";
                     break;
             }
-            return currentWeather;
+            return getWeather;
         }
         public int SetTemperature()
         {
-            currentTemperature = randomWeather.Next(50, 101);
+            Random randomTemperature = new Random();
+            getTemperature = randomTemperature.Next(50, 101);
 
-            return currentTemperature;
+            return getTemperature;
         }
         public int ChangeWeather()
         {
-            if (currentWeather == "Rainy")
+            if (getWeather == "Rainy")
             {
                 currentTemperature = currentTemperature - 10;
                 return currentTemperature;
             }
-            else if (currentWeather == "Cloudy")
+            else if (getWeather == "Cloudy")
             {
                 currentTemperature = currentTemperature - 5;
                 return currentTemperature;

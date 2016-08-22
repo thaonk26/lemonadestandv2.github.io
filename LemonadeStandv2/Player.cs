@@ -20,15 +20,15 @@ namespace LemonadeStandv2
         {
             Store store = new Store();
             store.BuyLemons(bank, currentWeather, inventory, day, lemon, sugar, ice, cups, player);
-            store.BuyCups(bank, currentWeather, inventory, day, cups, lemon, ice, sugar, player);
-            store.BuyIce(bank, currentWeather,   inventory, day, ice, lemon, sugar, cups, player);
-            store.BuySugar(bank, currentWeather,   inventory, day, sugar, lemon,ice, cups, player);
+            store.BuyCups(bank, currentWeather,  inventory, day, cups, lemon, ice, sugar, player);
+            store.BuyIce(bank, currentWeather, inventory, day, ice, lemon, sugar, cups, player);
+            store.BuySugar(bank, currentWeather, inventory, day, sugar, lemon,ice, cups, player);
             Console.Clear();
             inventory.printDisplay(bank, currentWeather, lemon, sugar, ice, cups, day, player);
-            currentWeather.ChangeWeather();
-            bank.totalMoneySpent = bank.totalMoneySpent + (store.storeLemons * store.lemonpricePerLemon) + (store.storeSugar * store.sugarpricePerSugarCube) + (store.storeIce * store.icepricePerIceCube) + (store.storeCups * store.cupspricePerCup);
+            bank.totalMoneySpent = bank.totalMoneySpent + (store.storeLemons * lemon.pricePerLemon) + (store.storeSugar * sugar.pricePerSugarCube) + (store.storeIce * ice.pricePerIceCube) + (store.storeCups * cups.pricePerCup);
             Console.WriteLine("At what would you like to sell your Lemonade at?");
             double.TryParse(Console.ReadLine(), out lemonadePrice);
+            currentWeather.ChangeWeather();
         }
         public void SetRecipe(Recipe recipe)
         {

@@ -30,27 +30,27 @@ namespace LemonadeStandv2
             int buyChanceCounter = 1;
             Thread.Sleep((int)TimeSpan.FromSeconds(.225).TotalMilliseconds);
             Random random = new Random();
-            if (weather.currentTemperature < 60 && player.lemonadePrice <= .20 && recipe.iceRecipe <= 4)
+            if (weather.getTemperature < 60 && player.lemonadePrice <= .20 && recipe.iceRecipe <= 4)
             {
                 buyChanceCounter += 3;
                 if (random.Next(1, buyChanceCounter) == 1) { return true; } else { return false; }
             }
-            else if (weather.currentTemperature < 70 && player.lemonadePrice <= .25 && recipe.iceRecipe <= 6)
+            else if (weather.getTemperature < 70 && player.lemonadePrice <= .25 && recipe.iceRecipe <= 6)
             {
                 buyChanceCounter += 3;
                 if (random.Next(1, buyChanceCounter) == 1) { return true; } else { return false; }
             }
-            else if (weather.currentTemperature < 80 && player.lemonadePrice <= .30 && recipe.iceRecipe <= 8)
+            else if (weather.getTemperature < 80 && player.lemonadePrice <= .30 && recipe.iceRecipe <= 8)
             {
                 buyChanceCounter += 3;
                 if (random.Next(1, buyChanceCounter) == 1) { return true; } else { return false; }
             }
-            else if (weather.currentTemperature < 90 && player.lemonadePrice <= .40 && recipe.iceRecipe <= 10)
+            else if (weather.getTemperature < 90 && player.lemonadePrice <= .40 && recipe.iceRecipe <= 10)
             {
                 buyChanceCounter += 2;
                 if (random.Next(1, buyChanceCounter) == 1) { return true; } else { return false; }
             }
-            else if (weather.currentTemperature < 100 && player.lemonadePrice <= .50 && recipe.iceRecipe <= 10)
+            else if (weather.getTemperature < 100 && player.lemonadePrice <= .50 && recipe.iceRecipe <= 10)
             {
                 buyChanceCounter += 2;
                 if (random.Next(1, buyChanceCounter) == 1) { return true; } else { return false; }
