@@ -12,10 +12,10 @@ namespace LemonadeStandv2
         public int storeIce = 0;
         public int storeCups = 0;
         public int storeSugar = 0;
-        public double pricePerLemon = .10;
+        public double pricePerLemon = .05;
         public double pricePerIce = .01;
-        public double pricePerCup = 0.03;
-        public double pricePerSugar = .10;
+        public double pricePerCup = 0.02;
+        public double pricePerSugar = .05;
 
         public Store()
         {
@@ -30,7 +30,7 @@ namespace LemonadeStandv2
                 Console.Clear();
                 inventory.printDisplay(bank, currentWeather, lemon, sugar, ice, cups, day, player);
                 Console.WriteLine();
-                Console.WriteLine("Each Lemon costs $0.10. Enter '999' to move on.");
+                Console.WriteLine("Each Lemon costs $0.05. Enter '999' to move on.");
                 storeLemons = 0;
                 int.TryParse(Console.ReadLine(), out amountOfLemons);
                 if((bank.money - (pricePerLemon * amountOfLemons) > 0))
@@ -40,6 +40,7 @@ namespace LemonadeStandv2
                     lemon.lemon = lemon.lemon + storeLemons;
                 } else if(amountOfLemons == 999)
                 {
+                    storeLemons = 0;
                     buyingLemons = false;
                 } else
                 {
@@ -58,7 +59,7 @@ namespace LemonadeStandv2
                 Console.Clear();
                 inventory.printDisplay(bank, currentWeather, lemon, sugar, ice, cups, day, player);
                 Console.WriteLine();
-                Console.WriteLine("Each Cup costs $0.03. Enter '999' to move on.");
+                Console.WriteLine("Each Cup costs $0.02. Enter '999' to move on.");
                 int.TryParse(Console.ReadLine(), out amountOfCups);
                 if ((bank.money - (pricePerCup * amountOfCups) > 0))
                 {
@@ -67,6 +68,7 @@ namespace LemonadeStandv2
                     cups.cups = cups.cups + storeCups;
                 }else if(amountOfCups == 999)
                 {
+                    storeCups = 0;
                     buyingCups = false;
                 }
                 else
@@ -95,6 +97,7 @@ namespace LemonadeStandv2
                     ice.ice = ice.ice + storeIce;
                 } else if(amountOfIce == 999)
                 {
+                    storeIce = 0;
                     buyingIce = false;
                 }
                 else
@@ -114,7 +117,7 @@ namespace LemonadeStandv2
                 Console.Clear();
                 inventory.printDisplay(bank, currentWeather, lemon, sugar, ice, cups, day, player);
                 Console.WriteLine();
-                Console.WriteLine("Would you like to buy 10($1), 20($2) or 40($4) Sugar? Enter to move on.");
+                Console.WriteLine("Each Sugar Cube costs $0.05. Enter '999' to move on.");
                 int.TryParse(Console.ReadLine(), out amountOfSugar);
                 if ((bank.money - (pricePerSugar * amountOfSugar) > 0))
                 {
@@ -123,6 +126,7 @@ namespace LemonadeStandv2
                     sugar.sugar = sugar.sugar + storeSugar;
                 } else if( amountOfSugar == 999)
                 {
+                    storeSugar = 0;
                     buyingSugar = false;
                 }
                 else

@@ -4,3 +4,9 @@ C:\Users\Nathaniel\Desktop\DCC Lectures\C# projects\Week 1\LemonadeStandv2\Lemon
 C:\Users\Nathaniel\Desktop\DCC Lectures\C# projects\Week 1\LemonadeStandv2\LemonadeStandv2\obj\Debug\LemonadeStandv2.csprojResolveAssemblyReference.cache
 C:\Users\Nathaniel\Desktop\DCC Lectures\C# projects\Week 1\LemonadeStandv2\LemonadeStandv2\obj\Debug\LemonadeStandv2.exe
 C:\Users\Nathaniel\Desktop\DCC Lectures\C# projects\Week 1\LemonadeStandv2\LemonadeStandv2\obj\Debug\LemonadeStandv2.pdb
+C:\Users\Nathaniel\Documents\GitHub\lemonadestandv2.github.io\LemonadeStandv2\bin\Debug\LemonadeStandv2.exe.config
+C:\Users\Nathaniel\Documents\GitHub\lemonadestandv2.github.io\LemonadeStandv2\obj\Debug\LemonadeStandv2.exe
+C:\Users\Nathaniel\Documents\GitHub\lemonadestandv2.github.io\LemonadeStandv2\obj\Debug\LemonadeStandv2.pdb
+C:\Users\Nathaniel\Documents\GitHub\lemonadestandv2.github.io\LemonadeStandv2\bin\Debug\LemonadeStandv2.exe
+C:\Users\Nathaniel\Documents\GitHub\lemonadestandv2.github.io\LemonadeStandv2\bin\Debug\LemonadeStandv2.pdb
+C:\Users\Nathaniel\Documents\GitHub\lemonadestandv2.github.io\LemonadeStandv2\obj\Debug\LemonadeStandv2.csprojResolveAssemblyReference.cache
