@@ -15,19 +15,19 @@ namespace LemonadeStandv2
         public int currentTemperature;
         public string tomorrowsWeather;
         public int tomorrowsTemperature;
+        Random randomWeather = new Random();
         public Weather()
         {
             getWeather = SetWeather();
             currentWeather = getWeather;
             getTemperature = SetTemperature();
             currentTemperature = getTemperature;
-            Thread.Sleep(500);
+            //Thread.Sleep(500);
             tomorrowsWeather = SetWeather();
             tomorrowsTemperature = SetTemperature();
         }
         public string SetWeather()
         {
-            Random randomWeather = new Random();
             int weather = randomWeather.Next(1, 4);
             switch (weather)
             {

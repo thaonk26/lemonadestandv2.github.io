@@ -28,7 +28,7 @@ namespace LemonadeStandv2
         public bool CustomerBuyChance(Inventory inventory, Weather weather, Recipe recipe, Player player)
         {
             int buyChanceCounter = 1;
-            Thread.Sleep((int)TimeSpan.FromSeconds(.225).TotalMilliseconds);
+            Thread.Sleep(225);//(int)TimeSpan.FromSeconds(.225).TotalMilliseconds);
             Random random = new Random();
             if (weather.getTemperature < 60 && player.lemonadePrice <= .20 && recipe.iceRecipe <= 4)
             {
