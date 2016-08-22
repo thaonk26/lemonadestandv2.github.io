@@ -9,10 +9,11 @@ namespace LemonadeStandv2
     class Lemon
     {
         public double lemon;
+        public double pricePerLemon;
         
         public Lemon()
         {
-
+            pricePerLemon = .05;
         }
     }
 }

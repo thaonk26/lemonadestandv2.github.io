@@ -9,13 +9,9 @@ namespace LemonadeStandv2
     class Store
     {
         public int storeLemons;
-        public int storeIce = 0;
-        public int storeCups = 0;
-        public int storeSugar = 0;
-        public double pricePerLemon = .05;
-        public double pricePerIce = .01;
-        public double pricePerCup = 0.02;
-        public double pricePerSugar = .05;
+        public int storeIce;
+        public int storeCups;
+        public int storeSugar;
 
         public Store()
         {
@@ -33,10 +29,10 @@ namespace LemonadeStandv2
                 Console.WriteLine("Each Lemon costs $0.05. Enter '999' to move on.");
                 storeLemons = 0;
                 int.TryParse(Console.ReadLine(), out amountOfLemons);
-                if((bank.money - (pricePerLemon * amountOfLemons) > 0))
+                if((bank.money - (lemon.pricePerLemon * amountOfLemons) > 0))
                 {
                     storeLemons = storeLemons + amountOfLemons;
-                    bank.money = bank.money - (pricePerLemon * amountOfLemons);
+                    bank.money = bank.money - (lemon.pricePerLemon * amountOfLemons);
                     lemon.lemon = lemon.lemon + storeLemons;
                 } else if(amountOfLemons == 999)
                 {
@@ -60,11 +56,12 @@ namespace LemonadeStandv2
                 inventory.printDisplay(bank, currentWeather, lemon, sugar, ice, cups, day, player);
                 Console.WriteLine();
                 Console.WriteLine("Each Cup costs $0.02. Enter '999' to move on.");
+                storeCups = 0;
                 int.TryParse(Console.ReadLine(), out amountOfCups);
-                if ((bank.money - (pricePerCup * amountOfCups) > 0))
+                if ((bank.money - (cups.pricePerCup * amountOfCups) > 0))
                 {
                     storeCups = storeCups + amountOfCups;
-                    bank.money = bank.money - (pricePerLemon * amountOfCups);
+                    bank.money = bank.money - (cups.pricePerCup * amountOfCups);
                     cups.cups = cups.cups + storeCups;
                 }else if(amountOfCups == 999)
                 {
@@ -89,11 +86,12 @@ namespace LemonadeStandv2
                 inventory.printDisplay(bank, currentWeather, lemon, sugar, ice, cups, day, player);
                 Console.WriteLine();
                 Console.WriteLine("Each Ice Cube costs $0.01. Enter '999' to move on.");
+                storeIce = 0;
                 int.TryParse(Console.ReadLine(), out amountOfIce);
-                if ((bank.money - (pricePerIce * amountOfIce) > 0))
+                if ((bank.money - (ice.pricePerIceCube * amountOfIce) > 0))
                 {
                     storeIce = storeIce + amountOfIce;
-                    bank.money = bank.money - (pricePerIce * amountOfIce);
+                    bank.money = bank.money - (ice.pricePerIceCube * amountOfIce);
                     ice.ice = ice.ice + storeIce;
                 } else if(amountOfIce == 999)
                 {
@@ -118,11 +116,12 @@ namespace LemonadeStandv2
                 inventory.printDisplay(bank, currentWeather, lemon, sugar, ice, cups, day, player);
                 Console.WriteLine();
                 Console.WriteLine("Each Sugar Cube costs $0.05. Enter '999' to move on.");
+                storeSugar = 0;
                 int.TryParse(Console.ReadLine(), out amountOfSugar);
-                if ((bank.money - (pricePerSugar * amountOfSugar) > 0))
+                if ((bank.money - (sugar.pricePerSugarCube * amountOfSugar) > 0))
                 {
                     storeSugar = storeSugar + amountOfSugar;
-                    bank.money = bank.money - (pricePerSugar * amountOfSugar);
+                    bank.money = bank.money - (sugar.pricePerSugarCube * amountOfSugar);
                     sugar.sugar = sugar.sugar + storeSugar;
                 } else if( amountOfSugar == 999)
                 {

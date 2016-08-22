@@ -9,9 +9,10 @@ namespace LemonadeStandv2
     class Ice
     {
         public double ice;
+        public double pricePerIceCube;
         public Ice()
         {
-
+            pricePerIceCube = .01;
         }
     }
 }

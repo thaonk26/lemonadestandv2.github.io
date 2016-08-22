@@ -26,7 +26,7 @@ namespace LemonadeStandv2
             Console.Clear();
             inventory.printDisplay(bank, currentWeather, lemon, sugar, ice, cups, day, player);
             currentWeather.ChangeWeather();
-            bank.totalMoneySpent = bank.totalMoneySpent + (store.storeLemons * store.pricePerLemon) + (store.storeSugar * store.pricePerSugar) + (store.storeIce * store.pricePerIce) + (store.storeCups * store.pricePerCup);
+            bank.totalMoneySpent = bank.totalMoneySpent + (store.storeLemons * store.lemonpricePerLemon) + (store.storeSugar * store.sugarpricePerSugarCube) + (store.storeIce * store.icepricePerIceCube) + (store.storeCups * store.cupspricePerCup);
             Console.WriteLine("At what would you like to sell your Lemonade at?");
             double.TryParse(Console.ReadLine(), out lemonadePrice);
         }

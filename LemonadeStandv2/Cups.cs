@@ -9,9 +9,10 @@ namespace LemonadeStandv2
     class Cups
     {
         public double cups;
+        public double pricePerCup;
         public Cups()
         {
-
+            pricePerCup = .02;
         }
     }
 }

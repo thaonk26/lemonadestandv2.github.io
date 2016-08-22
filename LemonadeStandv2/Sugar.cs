@@ -9,9 +9,10 @@ namespace LemonadeStandv2
     class Sugar
     {
         public double sugar;
+        public double pricePerSugarCube;
         public Sugar()
         {
-
+            pricePerSugarCube = .05;
         }
     }
 }
