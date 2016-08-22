@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace LemonadeStandv2
 {
@@ -11,9 +12,15 @@ namespace LemonadeStandv2
         Random randomWeather = new Random();
         public string currentWeather;
         public int currentTemperature;
+        public string tomorrowsWeather;
+        public int tomorrowsTemperature;
         public Weather()
         {
-
+            currentWeather = SetWeather();
+            currentTemperature = SetTemperature();
+            Thread.Sleep(500);
+            tomorrowsWeather = SetWeather();
+            tomorrowsTemperature = SetTemperature();
         }
         public string SetWeather()
         {
@@ -56,10 +63,12 @@ namespace LemonadeStandv2
                 return currentTemperature;
             }
         }
-        public void GetCurrentWeather()
+        public void SetCurrentWeather()
         {
-            SetWeather();
-            SetTemperature();
+            currentWeather = tomorrowsWeather;
+            currentTemperature = tomorrowsTemperature;
+            tomorrowsWeather = SetWeather();
+            tomorrowsTemperature = SetTemperature();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace LemonadeStandv2
                 for (int i = 0; i < game.customerGenerate.Count; i++)
                 {
                     customerCount = i + 1;
-                    if (customer.CustomerBuyChance(inventory, weather, recipe, player1) != false && player1.lemonadePrice < 1.5 && player1.lemonadePrice > .05)
+                    if (customer.CustomerBuyChance(inventory, weather, recipe, player1) != false && player1.lemonadePrice <= 1.5 && player1.lemonadePrice > .05)
                     {
                         pitcher.pourPitcher(recipe, ice, lemon, sugar, cups, bank, player1, day, game);
                         //Console.WriteLine("Customer {0} bought a cup", i + 1);

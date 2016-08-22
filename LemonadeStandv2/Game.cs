@@ -19,7 +19,6 @@ namespace LemonadeStandv2
         Bank bank = new Bank();
         Customer customer = new Customer();
         Weather weather = new Weather();
-        Weather tomorrowsWeather;
         Pitcher pitcher = new Pitcher();
         Inventory inventory = new Inventory();
         Store store = new Store();
@@ -38,18 +37,19 @@ namespace LemonadeStandv2
             for (int i = 0; i < day.setDay; i++)
             {
                 day.currentDay = i + 1;
-                tomorrowsWeather = new Weather();
-                tomorrowsWeather.SetWeather();
-                tomorrowsWeather.SetTemperature();
                 customer.SpawnCustomer(game);
-                weather.GetCurrentWeather();
-                player1.PrepLemonade(bank, weather, tomorrowsWeather, inventory, day, lemon, sugar, ice, cups, player1);
+                player1.PrepLemonade(bank, weather, inventory, day, lemon, sugar, ice, cups, player1);
                 player1.SetRecipe(recipe);
                 day.RunDay(pitcher, recipe, ice, lemon, sugar, cups, bank, player1, customer, day, inventory, weather, game);
+                weather.SetCurrentWeather();
                 Console.ReadLine();
-                weather = tomorrowsWeather;
             }
             bank.TotalSalesResults(inventory, player1, day, ice, lemon, sugar, cups, store);
         }
+        //public void SaveGame()
+        //{
+        //    WriteFile saveGame = new WriteFile(List <string> SavedInventory);
+        //    saveGame
+        //}
     }
 }
