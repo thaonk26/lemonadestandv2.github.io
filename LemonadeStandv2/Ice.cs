@@ -10,6 +10,7 @@ namespace LemonadeStandv2
     {
         public double ice;
         public double pricePerIceCube;
+        public double liquidateIce;
         public Ice()
         {
             pricePerIceCube = .01;

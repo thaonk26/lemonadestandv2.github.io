@@ -37,6 +37,7 @@ namespace LemonadeStandv2
             }
             Console.Clear();
             Console.WriteLine("All you ice has melted");
+            ice.liquidateIce = ice.liquidateIce + ice.ice;
             ice.ice = 0;
         }
     }

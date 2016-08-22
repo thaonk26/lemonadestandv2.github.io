@@ -23,7 +23,7 @@ namespace LemonadeStandv2
             Console.WriteLine("Congrats {0}!!! You finished your {1} Days of Lemonade Stand!", player1.name, day.setDay);
             Console.WriteLine("Your total sales for {1} Days are ${0}", totalSales, day.setDay);
             Console.WriteLine("Your total money spent during the {0} Days are ${1}", day.setDay, totalMoneySpent);
-            inventory.liquidatedInventory = ((ice.ice * ice.pricePerIceCube) + (lemon.lemon * lemon.pricePerLemon) + (sugar.sugar * sugar.pricePerSugarCube) + (cups.cups * cups.pricePerCup));
+            inventory.liquidatedInventory = ((ice.liquidateIce * ice.pricePerIceCube) + (lemon.lemon * lemon.pricePerLemon) + (sugar.sugar * sugar.pricePerSugarCube) + (cups.cups * cups.pricePerCup));
             Console.WriteLine("Your liquidated inventory value is ${0}", inventory.liquidatedInventory);
             double profits = totalSales - totalMoneySpent - inventory.liquidatedInventory;
             if (profits > 0)
